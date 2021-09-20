@@ -10,20 +10,33 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
-      <ion-label >Pokémon Yellow</ion-label>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+      {{c.name}}
     </ion-item>
+  </ion-list>
+  <br><br><br>
+  <ion-list>
+    <ion-label class="ion-margin">Microsoft Xbox Series S</ion-label>
     <ion-item>
-      <ion-label>Mega Man X</ion-label>
+      <img src="/assets/xbox.png" alt="">
     </ion-item>
+    <br><br><br>
+    <ion-label class="ion-margin">Apple iPhone 11 (64 GB / Black)</ion-label>
     <ion-item>
-      <ion-label>The Legend of Zelda</ion-label>
+      <img src="/assets/iphone1.png" alt="">
     </ion-item>
+    <br><br><br>
+    <ion-label class="ion-margin">Lenovo IdeaPad Gaming 3</ion-label>
     <ion-item>
-      <ion-label>Pac-Man</ion-label>
+      <img src="/assets/notebook1.png" alt="">
     </ion-item>
+    <br><br><br>
+    <ion-label class="ion-margin">Logitech G203 Lightsync Black</ion-label>
     <ion-item>
-      <ion-label>Super Mario World</ion-label>
+      <img src="/assets/mouse1.png" alt="">
     </ion-item>
+    <br><br><br>
+
   </ion-list>
 </ion-content>
